@@ -1,0 +1,55 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 500px;
+    transform: scale(0.5);
+    letter-spacing: 25px;
+}
+
+
+.logo__element {
+    position: relative;
+    width: 360px;
+    height: 520px;
+}
+
+.first, .second, .third {
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: #b00612;
+}
+
+.first {
+    left: 0;
+}
+
+.second {
+    background: #e50815;
+    left: 0;
+    z-index: 1;
+    transform-origin: top left;
+    transform: skewX(25.4deg);
+    box-shadow: 0 0 20px #000;
+}
+
+.third {
+    right: 0;
+}
+
+.logo__element::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 120%;
+    height: 30px;
+    background: #000;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+}
